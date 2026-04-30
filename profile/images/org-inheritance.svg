@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-labelledby="title desc">
+  <title id="title">Diplomat-ai/.github inheritance map</title>
+  <desc id="desc">Diagram showing how files in the .github org repo propagate to other Diplomat-ai repositories. SECURITY.md, CONTRIBUTING.md, CODE_OF_CONDUCT.md, SUPPORT.md, FUNDING.yml, ISSUE_TEMPLATE and PULL_REQUEST_TEMPLATE are inherited as fallbacks. dependabot.yml, workflows, CodeQL configs and branch protection do not propagate and must live in each repo.</desc>
+  <rect x="0" y="0" width="1200" height="620" fill="#FFFFFF" />
+  <text x="600.0" y="38" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#64748B" text-anchor="middle">ORG-WIDE INHERITANCE</text>
+  <text x="600.0" y="64" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="middle">What this repo propagates to every other Diplomat-ai repository</text>
+  <text x="60" y="110" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" fill="#64748B" text-anchor="start">SOURCE — Diplomat-ai/.github</text>
+  <text x="600.0" y="110" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" fill="#64748B" text-anchor="middle">PROPAGATION</text>
+  <text x="760" y="110" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" fill="#64748B" text-anchor="start">TARGET — every other repo</text>
+  <rect x="60" y="140" width="360" height="30" rx="6" ry="6" fill="#D1FAE5" stroke="#047857" stroke-width="1" />
+  <text x="74" y="161" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="500" fill="#0F172A" text-anchor="start">SECURITY.md</text>
+  <path d="M 397 155.0 L 401 159.0 L 408 151.0" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="60" y="178" width="360" height="30" rx="6" ry="6" fill="#D1FAE5" stroke="#047857" stroke-width="1" />
+  <text x="74" y="199" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="500" fill="#0F172A" text-anchor="start">CONTRIBUTING.md</text>
+  <path d="M 397 193.0 L 401 197.0 L 408 189.0" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="60" y="216" width="360" height="30" rx="6" ry="6" fill="#D1FAE5" stroke="#047857" stroke-width="1" />
+  <text x="74" y="237" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="500" fill="#0F172A" text-anchor="start">CODE_OF_CONDUCT.md</text>
+  <path d="M 397 231.0 L 401 235.0 L 408 227.0" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="60" y="254" width="360" height="30" rx="6" ry="6" fill="#D1FAE5" stroke="#047857" stroke-width="1" />
+  <text x="74" y="275" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="500" fill="#0F172A" text-anchor="start">SUPPORT.md</text>
+  <path d="M 397 269.0 L 401 273.0 L 408 265.0" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="60" y="292" width="360" height="30" rx="6" ry="6" fill="#D1FAE5" stroke="#047857" stroke-width="1" />
+  <text x="74" y="313" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="500" fill="#0F172A" text-anchor="start">FUNDING.yml</text>
+  <path d="M 397 307.0 L 401 311.0 L 408 303.0" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="60" y="330" width="360" height="30" rx="6" ry="6" fill="#D1FAE5" stroke="#047857" stroke-width="1" />
+  <text x="74" y="351" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="500" fill="#0F172A" text-anchor="start">.github/ISSUE_TEMPLATE/</text>
+  <path d="M 397 345.0 L 401 349.0 L 408 341.0" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="60" y="368" width="360" height="30" rx="6" ry="6" fill="#D1FAE5" stroke="#047857" stroke-width="1" />
+  <text x="74" y="389" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="500" fill="#0F172A" text-anchor="start">.github/PULL_REQUEST_TEMPLATE.md</text>
+  <path d="M 397 383.0 L 401 387.0 L 408 379.0" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="500" y="223.0" width="200" height="100" rx="12" ry="12" fill="#4F46E5" stroke="#312E81" stroke-width="2" />
+  <text x="600.0" y="265.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">Diplomat-ai</text>
+  <text x="600.0" y="287.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">/.github</text>
+  <text x="600.0" y="309.0" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#E0E7FF" text-anchor="middle">(this repo)</text>
+  <path d="M 424 155.0 C 460.0 155.0, 460.0 273.0, 488 273.0" fill="none" stroke="#047857" stroke-width="1.8" opacity="0.85" />
+  <path d="M 486 268.0 L 496 273.0 L 486 278.0" fill="none" stroke="#047857" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 424 193.0 C 460.0 193.0, 460.0 273.0, 488 273.0" fill="none" stroke="#047857" stroke-width="1.8" opacity="0.85" />
+  <path d="M 486 268.0 L 496 273.0 L 486 278.0" fill="none" stroke="#047857" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 424 231.0 C 460.0 231.0, 460.0 273.0, 488 273.0" fill="none" stroke="#047857" stroke-width="1.8" opacity="0.85" />
+  <path d="M 486 268.0 L 496 273.0 L 486 278.0" fill="none" stroke="#047857" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 424 269.0 C 460.0 269.0, 460.0 273.0, 488 273.0" fill="none" stroke="#047857" stroke-width="1.8" opacity="0.85" />
+  <path d="M 486 268.0 L 496 273.0 L 486 278.0" fill="none" stroke="#047857" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 424 307.0 C 460.0 307.0, 460.0 273.0, 488 273.0" fill="none" stroke="#047857" stroke-width="1.8" opacity="0.85" />
+  <path d="M 486 268.0 L 496 273.0 L 486 278.0" fill="none" stroke="#047857" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 424 345.0 C 460.0 345.0, 460.0 273.0, 488 273.0" fill="none" stroke="#047857" stroke-width="1.8" opacity="0.85" />
+  <path d="M 486 268.0 L 496 273.0 L 486 278.0" fill="none" stroke="#047857" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 424 383.0 C 460.0 383.0, 460.0 273.0, 488 273.0" fill="none" stroke="#047857" stroke-width="1.8" opacity="0.85" />
+  <path d="M 486 268.0 L 496 273.0 L 486 278.0" fill="none" stroke="#047857" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="760" y="118.0" width="380" height="80" rx="10" ry="10" fill="#FEF3C7" stroke="#FCD34D" stroke-width="1.5" />
+  <text x="780" y="148.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" font-weight="700" fill="#0F172A" text-anchor="start">Diplomat-ai/diplomat-agent</text>
+  <text x="780" y="174.0" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#64748B" text-anchor="start">uses local files where present, falls back here otherwise</text>
+  <path d="M 704 273.0 C 730.0 273.0, 730.0 158.0, 748 158.0" fill="none" stroke="#B45309" stroke-width="1.8" opacity="0.85" />
+  <path d="M 746 153.0 L 756 158.0 L 746 163.0" fill="none" stroke="#B45309" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="760" y="228.0" width="380" height="80" rx="10" ry="10" fill="#E0E7FF" stroke="#A5B4FC" stroke-width="1.5" />
+  <text x="780" y="258.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" font-weight="700" fill="#0F172A" text-anchor="start">Diplomat-ai/diplomat-gate</text>
+  <text x="780" y="284.0" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#64748B" text-anchor="start">uses local files where present, falls back here otherwise</text>
+  <path d="M 704 273.0 C 730.0 273.0, 730.0 268.0, 748 268.0" fill="none" stroke="#4F46E5" stroke-width="1.8" opacity="0.85" />
+  <path d="M 746 263.0 L 756 268.0 L 746 273.0" fill="none" stroke="#4F46E5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="760" y="338.0" width="380" height="80" rx="10" ry="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5" />
+  <text x="780" y="368.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" font-weight="700" fill="#0F172A" text-anchor="start">Diplomat-ai/future repos</text>
+  <text x="780" y="394.0" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#64748B" text-anchor="start">automatic — no setup needed</text>
+  <path d="M 704 273.0 C 730.0 273.0, 730.0 378.0, 748 378.0" fill="none" stroke="#64748B" stroke-width="1.8" opacity="0.85" />
+  <path d="M 746 373.0 L 756 378.0 L 746 383.0" fill="none" stroke="#64748B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="60" y="480" width="1080" height="100" rx="10" ry="10" fill="#FEE2E2" stroke="#991B1B" stroke-width="1" />
+  <text x="80" y="508" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#991B1B" text-anchor="start">NOT inherited — must live in each repo</text>
+  <rect x="80.0" y="536" width="251.0" height="28" rx="6" ry="6" fill="#FEE2E2" stroke="#991B1B" stroke-width="1" />
+  <text x="94.0" y="555" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="500" fill="#0F172A" text-anchor="start">dependabot.yml</text>
+  <path d="M 308.0 545.0 L 318.0 555.0" fill="none" stroke="#991B1B" stroke-width="2" stroke-linecap="round" />
+  <path d="M 318.0 545.0 L 308.0 555.0" fill="none" stroke="#991B1B" stroke-width="2" stroke-linecap="round" />
+  <rect x="343.0" y="536" width="251.0" height="28" rx="6" ry="6" fill="#FEE2E2" stroke="#991B1B" stroke-width="1" />
+  <text x="357.0" y="555" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="500" fill="#0F172A" text-anchor="start">.github/workflows/</text>
+  <path d="M 571.0 545.0 L 581.0 555.0" fill="none" stroke="#991B1B" stroke-width="2" stroke-linecap="round" />
+  <path d="M 581.0 545.0 L 571.0 555.0" fill="none" stroke="#991B1B" stroke-width="2" stroke-linecap="round" />
+  <rect x="606.0" y="536" width="251.0" height="28" rx="6" ry="6" fill="#FEE2E2" stroke="#991B1B" stroke-width="1" />
+  <text x="620.0" y="555" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="500" fill="#0F172A" text-anchor="start">CodeQL configs</text>
+  <path d="M 834.0 545.0 L 844.0 555.0" fill="none" stroke="#991B1B" stroke-width="2" stroke-linecap="round" />
+  <path d="M 844.0 545.0 L 834.0 555.0" fill="none" stroke="#991B1B" stroke-width="2" stroke-linecap="round" />
+  <rect x="869.0" y="536" width="251.0" height="28" rx="6" ry="6" fill="#FEE2E2" stroke="#991B1B" stroke-width="1" />
+  <text x="883.0" y="555" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="500" fill="#0F172A" text-anchor="start">branch protection</text>
+  <path d="M 1097.0 545.0 L 1107.0 555.0" fill="none" stroke="#991B1B" stroke-width="2" stroke-linecap="round" />
+  <path d="M 1107.0 545.0 L 1097.0 555.0" fill="none" stroke="#991B1B" stroke-width="2" stroke-linecap="round" />
+  <text x="600.0" y="606" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="400" fill="#94A3B8" text-anchor="middle">Per-repo files override the fallback. Reusable workflows must be referenced explicitly: uses: Diplomat-ai/.github/.github/workflows/&lt;name&gt;.yml@main</text>
+</svg>

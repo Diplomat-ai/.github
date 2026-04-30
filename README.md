@@ -36,20 +36,11 @@ The org landing page rendered from `profile/README.md` lives at
 
 ## What gets inherited (and what doesn't)
 
-GitHub propagates a specific subset of files from this repo to every
-other repository in `Diplomat-ai/` that does not define its own copy:
+![Diagram: files in Diplomat-ai/.github propagate as fallbacks to every other repo in the organization. Inherited (green check) — SECURITY.md, CONTRIBUTING.md, CODE_OF_CONDUCT.md, SUPPORT.md, FUNDING.yml, ISSUE_TEMPLATE/, PULL_REQUEST_TEMPLATE.md. Not inherited (red cross) — dependabot.yml, workflows, CodeQL configs, branch protection.](./profile/images/org-inheritance.svg)
 
-**Inherited** : `SECURITY.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`,
-`SUPPORT.md`, `FUNDING.yml`, `.github/ISSUE_TEMPLATE/`,
-`.github/PULL_REQUEST_TEMPLATE.md`.
-
-**NOT inherited** (must live in each repo): `dependabot.yml`, anything
-under `.github/workflows/`, CodeQL configs, branch protection rules.
-Reusable workflows must be referenced explicitly with
-`uses: Diplomat-ai/.github/.github/workflows/<name>.yml@main`.
-
-Per-repo overrides take precedence — `diplomat-gate/SECURITY.md` and
-`diplomat-agent/SECURITY.md` continue to apply where they exist.
+Per-repo files always win. `diplomat-gate/SECURITY.md` and
+`diplomat-agent/SECURITY.md` continue to apply where they exist; the
+files above are fallbacks for the rest.
 
 ## Regenerating the visuals
 
