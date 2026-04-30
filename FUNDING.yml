@@ -1,0 +1,10 @@
+# Org-wide GitHub funding configuration.
+# Inherited by every repo in Diplomat-ai/ that does not define its own.
+# Renders the "Sponsor" button on each repository.
+
+# GitHub Sponsors username (uncomment when GitHub Sponsors is enabled
+# for the maintainer account):
+# github: josselinchasse
+
+# Custom URL — visible immediately, no GitHub Sponsors approval needed.
+custom: ["https://diplomat.run/sponsor"]
