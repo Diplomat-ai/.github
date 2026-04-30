@@ -1,0 +1,92 @@
+name: 🐛 Bug report
+description: Something doesn't work the way it's supposed to.
+title: "[Bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug.
+
+        **Before submitting:** check that an issue for this doesn't
+        already exist. If you're not sure whether it's a bug or
+        intended behavior, open a Discussion instead.
+
+  - type: dropdown
+    id: project
+    attributes:
+      label: Which project?
+      options:
+        - diplomat-agent
+        - diplomat-gate
+        - .github / org-wide
+        - other
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Output of `diplomat-agent --version` or `diplomat-gate --version`. For org-wide issues, write "n/a".
+      placeholder: "0.4.0"
+    validations:
+      required: true
+
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      description: Output of `python --version`.
+      placeholder: "3.11.6"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Linux
+        - macOS
+        - Windows
+        - other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproducer
+    attributes:
+      label: Minimal reproducer
+      description: |
+        Smallest possible code or command to reproduce. For scanner
+        bugs, include the exact Python snippet that triggers the
+        wrong output. For gate bugs, include the YAML policy and
+        the dict you passed to `gate.evaluate(...)`.
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Paste the full output, including the stack trace if any.
+      render: shell
+    validations:
+      required: true

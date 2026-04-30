@@ -1,0 +1,73 @@
+name: 🎯 False positive (diplomat-agent)
+description: The scanner flagged something that is not actually a side-effecting tool call, or marked something UNGUARDED that has a guard.
+title: "[FP] "
+labels: ["false-positive", "diplomat-agent", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This is the most valuable kind of contribution to diplomat-agent.**
+        We'd rather fix a false positive than pretend it's not there.
+
+        Used for two cases:
+        1. The scanner flagged something that is **not** a side-effecting tool call.
+        2. The scanner reported a tool call as **UNGUARDED** when a guard exists in the same function.
+
+  - type: input
+    id: version
+    attributes:
+      label: diplomat-agent version
+      placeholder: "0.4.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: pattern
+    attributes:
+      label: Which pattern category?
+      description: From the patterns table in the README.
+      options:
+        - database_writes
+        - database_deletes
+        - http_writes
+        - payments
+        - email_messaging
+        - agent_invocations
+        - destructive_commands
+        - publish_upload
+        - guard_detection (a guard wasn't recognized)
+        - I'm not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: code
+    attributes:
+      label: The code that was incorrectly flagged
+      description: Paste the function (or the relevant snippet) verbatim. Strip secrets, keep the structure.
+      render: python
+    validations:
+      required: true
+
+  - type: textarea
+    id: scanner_output
+    attributes:
+      label: What the scanner reported
+      description: Run `diplomat-agent scan <file>` and paste the relevant section of the output.
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What the scanner should have reported
+      description: e.g. "Should not have flagged this — it's a GUI cleanup, not a destructive op." Or "Should have detected the @rate_limit decorator one line above."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Repo / context (optional)
+      description: If this came from a public repo, link it. Helps reproduce.

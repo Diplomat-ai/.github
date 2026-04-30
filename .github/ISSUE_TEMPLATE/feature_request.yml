@@ -1,0 +1,62 @@
+name: 💡 Feature request
+description: Suggest a new policy, pattern, adapter, output format, or capability.
+title: "[Feature] "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before opening a feature request:
+
+        - Check that it doesn't already exist in the [Discussions](https://github.com/orgs/Diplomat-ai/discussions)
+          or in `docs/` of the relevant repo.
+        - Remember the constraints: **deterministic, no LLM calls, zero
+          mandatory dependencies**. Features that violate these are
+          unlikely to land. Optional extras are fine.
+
+  - type: dropdown
+    id: project
+    attributes:
+      label: Which project?
+      options:
+        - diplomat-agent (scanner / patterns / output formats)
+        - diplomat-gate (policies / adapters / CLI)
+        - both
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of feature?
+      options:
+        - New scanner pattern (a side-effecting call we don't detect)
+        - New guard detection (a check we don't recognize as a guard)
+        - New gate policy
+        - New gate adapter (LLM SDK or framework)
+        - New output format
+        - CLI improvement
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's the problem you're trying to solve?
+      description: Concrete user-facing problem, not a solution. "Our agent calls `pytwilio.send_sms()` and the scanner doesn't see it" — not "add a Twilio pattern".
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: What would you like to see? Examples, sample config, or sample CLI invocation help a lot.
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you've considered
+      description: Existing workarounds, other tools, related patterns.
