@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="img" aria-labelledby="title desc">
+  <title id="title">Diplomat-ai ecosystem: Know, Decide, Prove</title>
+  <desc id="desc">Three products spanning the AI agent governance lifecycle: diplomat-agent maps tool calls statically (Know), diplomat-gate enforces policy at runtime (Decide), diplomat.run provides hosted audit and compliance (Prove).</desc>
+  <rect x="0" y="0" width="1200" height="520" fill="#FFFFFF" />
+  <text x="600.0" y="60" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#64748B" text-anchor="middle">GOVERNANCE AND RUNTIME SAFETY FOR AI AGENTS</text>
+  <text x="600.0" y="88" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="600" fill="#0F172A" text-anchor="middle">Three products. One ecosystem. Open source first.</text>
+  <rect x="60" y="130" width="340" height="280" rx="14" ry="14" fill="#FEF3C7" stroke="#FCD34D" stroke-width="1.8" />
+  <rect x="84" y="154" width="80" height="24" rx="12" ry="12" fill="#FFFFFF" stroke="#FCD34D" stroke-width="1" />
+  <text x="124.0" y="170" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" fill="#B45309" text-anchor="middle">KNOW</text>
+  <text x="84" y="218" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#0F172A" text-anchor="start">diplomat-agent</text>
+  <text x="84" y="248" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#B45309" text-anchor="start">Static AST scan</text>
+  <text x="84" y="288" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="400" fill="#0F172A" text-anchor="start">Pre-deploy. Maps every tool call with side effects.</text>
+  <line x1="84" y1="360" x2="376" y2="360" stroke="#FCD34D" stroke-width="1" opacity="0.6" />
+  <text x="84" y="386" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="500" fill="#64748B" text-anchor="start">Open source · Apache 2.0</text>
+  <line x1="404" y1="270.0" x2="418" y2="270.0" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M 416 265.0 L 426 270.0 L 416 275.0" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="430" y="130" width="340" height="280" rx="14" ry="14" fill="#E0E7FF" stroke="#A5B4FC" stroke-width="1.8" />
+  <rect x="454" y="154" width="80" height="24" rx="12" ry="12" fill="#FFFFFF" stroke="#A5B4FC" stroke-width="1" />
+  <text x="494.0" y="170" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" fill="#4F46E5" text-anchor="middle">DECIDE</text>
+  <text x="454" y="218" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#0F172A" text-anchor="start">diplomat-gate</text>
+  <text x="454" y="248" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#4F46E5" text-anchor="start">Runtime enforcement</text>
+  <text x="454" y="288" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="400" fill="#0F172A" text-anchor="start">CONTINUE / REVIEW / STOP in &lt;1 ms. Zero deps.</text>
+  <line x1="454" y1="360" x2="746" y2="360" stroke="#A5B4FC" stroke-width="1" opacity="0.6" />
+  <text x="454" y="386" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="500" fill="#64748B" text-anchor="start">Open source · Apache 2.0</text>
+  <line x1="774" y1="270.0" x2="788" y2="270.0" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M 786 265.0 L 796 270.0 L 786 275.0" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="800" y="130" width="340" height="280" rx="14" ry="14" fill="#D1FAE5" stroke="#6EE7B7" stroke-width="1.8" />
+  <rect x="824" y="154" width="80" height="24" rx="12" ry="12" fill="#FFFFFF" stroke="#6EE7B7" stroke-width="1" />
+  <text x="864.0" y="170" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" fill="#047857" text-anchor="middle">PROVE</text>
+  <text x="824" y="218" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#0F172A" text-anchor="start">diplomat.run</text>
+  <text x="824" y="248" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#047857" text-anchor="start">Decision Control Plane</text>
+  <text x="824" y="288" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="400" fill="#0F172A" text-anchor="start">Hash-chained audit. Compliance export. Hosted.</text>
+  <line x1="824" y1="360" x2="1116" y2="360" stroke="#6EE7B7" stroke-width="1" opacity="0.6" />
+  <text x="824" y="386" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="500" fill="#64748B" text-anchor="start">Hosted · diplomat.run</text>
+  <text x="600.0" y="490" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="500" fill="#64748B" text-anchor="middle">Know what your agent can do. Decide what it should. Prove what it did.</text>
+</svg>
