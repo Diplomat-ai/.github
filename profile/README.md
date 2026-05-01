@@ -5,7 +5,7 @@
 > Three Apache 2.0 building blocks for teams shipping AI agents into production.
 > Open source first. Deterministic. No LLM calls in the enforcement path.
 
-![Three products of the Diplomat-ai ecosystem: diplomat-agent (Know — static AST scan), diplomat-gate (Decide — runtime enforcement), diplomat.run (Prove — hosted audit and compliance)](./profile/images/triptych-know-decide-prove.svg)
+![Three products of the Diplomat-ai ecosystem: diplomat-agent (Know — static AST scan), diplomat-gate (Decide — runtime enforcement), diplomat.run (Prove — hosted audit and compliance)](./images/triptych-know-decide-prove.svg)
 
 ---
 
@@ -18,7 +18,7 @@ frameworks treat hard enforcement as the operator's responsibility.
 
 In practice, that means there is none.
 
-![76% of AI agent tool calls have zero deterministic guards: bar chart of PraisonAI 89%, CrewAI 78%, Skyvern 76%, Dify 75%, plus 12 more repos in the dataset](./profile/images/benchmark-unguarded.svg)
+![76% of AI agent tool calls have zero deterministic guards: bar chart of PraisonAI 89%, CrewAI 78%, Skyvern 76%, Dify 75%, plus 12 more repos in the dataset](./images/benchmark-unguarded.svg)
 
 We scanned **16 popular open-source AI agent codebases** with
 `diplomat-agent`. **76% of tool calls with real-world side effects had
