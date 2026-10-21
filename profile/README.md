@@ -1,85 +1,57 @@
-# Diplomat-ai
+<!-- Destination: Diplomat-ai/.github  →  profile/README.md -->
 
-> **Governance and runtime safety for AI agents.**
->
-> Three Apache 2.0 building blocks for teams shipping AI agents into production.
-> Open source first. Deterministic. No LLM calls in the enforcement path.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Diplomat-ai/diplomat-agent/main/docs/assets/readme-vision-v3.svg" alt="Diplomat: assess, control, prove" width="900">
+</p>
 
-![Three products of the Diplomat-ai ecosystem: diplomat-agent (Know — static AST scan), diplomat-gate (Decide — runtime enforcement), diplomat.run (Prove — hosted audit and compliance)](./images/triptych-know-decide-prove.svg)
+# Your AI agents act on their own. Your rules have to keep up.
 
----
+Diplomat turns your company's rules into automatic controls that block or approve the sensitive actions your rules cover, in under a millisecond, with verifiable proof.
 
-## The problem
+An assistant suggests. An agent executes. A rule written in a prompt is a request; only a rule applied to the action is a barrier.
 
-LLM-driven agents are now wired to APIs that send email, charge cards,
-delete files, hit production databases, and call other agents. The agent
-decides which function to invoke and with what arguments — most popular
-frameworks treat hard enforcement as the operator's responsibility.
+## Assess · Control · Prove
 
-In practice, that means there is none.
+One chain, three steps. Each step delivers value on its own, you decide how far to go.
 
-![76% of AI agent tool calls have zero deterministic guards: bar chart of PraisonAI 89%, CrewAI 78%, Skyvern 76%, Dify 75%, plus 12 more repos in the dataset](./images/benchmark-unguarded.svg)
+| Step | Question | Product | License | Status |
+|---|---|---|---|---|
+| **Assess** | What can our agents actually do? | [diplomat-agent](https://github.com/Diplomat-ai/diplomat-agent) | Apache-2.0 | [![PyPI](https://img.shields.io/pypi/v/diplomat-agent)](https://pypi.org/project/diplomat-agent/) |
+| **Control** | Do our rules apply before agents act? | [diplomat-gate](https://github.com/Diplomat-ai/diplomat-gate) | BSL 1.1 (source-available) | [![PyPI](https://img.shields.io/pypi/v/diplomat-gate)](https://pypi.org/project/diplomat-gate/) |
+| **Prove** | Can we show who authorized what? | [diplomat.run](https://diplomat.run) | Commercial (hosted) | early access |
 
-We scanned **16 popular open-source AI agent codebases** with
-`diplomat-agent`. **76% of tool calls with real-world side effects had
-zero deterministic guards** — no input validation, no rate limit, no
-auth check, no approval gate, no retry bound.
+- **diplomat-agent** is a static AST scanner for Python agents. It lists every tool call with a side effect (payment, email, database write, delete, subprocess, upload, agent invocation) and checks whether a guard surrounds it. It outputs a `toolcalls.yaml` Behavioral BOM, SARIF 2.1.0, CSAF 2.0, JSON and Markdown.
+- **diplomat-gate** is a deterministic runtime layer. It intercepts a tool call and returns `CONTINUE`, `REVIEW` or `STOP` in about 18 µs for a simple policy and about 496 µs for five policies (mean on a dev laptop, with a variance of 1.5x to 4x across sessions; see [Performance](https://github.com/Diplomat-ai/diplomat-gate#performance)). No LLM call, no network. Each decision produces a SHA-256 hash-chained receipt, and `REVIEW` decisions go to a local review queue.
+- **diplomat.run** is the hosted layer: cross-tenant audit, dashboard, managed approval routing, and an export mapped to EU AI Act Article 12.
 
-[Full per-repo results and methodology →](https://github.com/Diplomat-ai/diplomat-agent/blob/main/REALITY_CHECK_RESULTS.md)
+## Why
 
----
+We scanned 16 open-source agent codebases (7,552 tool calls). **71% of the analyzable tool calls had no guard** in the code. Method and raw results: [REALITY_CHECK_RESULTS.md](https://github.com/Diplomat-ai/diplomat-agent/blob/main/docs/REALITY_CHECK_RESULTS.md).
 
-## The three products
+## A note on licenses
 
-| | Stage | What it does | Status |
-|---|---|---|---|
-| [**diplomat-agent**](https://github.com/Diplomat-ai/diplomat-agent) | Know | Static AST scan. Maps every tool call with side effects. Pre-deploy. CI gate. | OSS · v0.4.0 · [PyPI](https://pypi.org/project/diplomat-agent/) |
-| [**diplomat-gate**](https://github.com/Diplomat-ai/diplomat-gate) | Decide | Deterministic runtime enforcement. CONTINUE / REVIEW / STOP in <1 ms. Hash-chained audit. Zero deps. | OSS · v0.3.0 · [PyPI](https://pypi.org/project/diplomat-gate/) |
-| [**diplomat.run**](https://diplomat.run) | Prove | Hosted Decision Control Plane. Cross-tenant immutable audit, real-time dashboard, managed approvals, EU AI Act Article 12 export. | Hosted · early access |
-
-```bash
-# Step 1 — find what your agent can do (static)
-pip install diplomat-agent
-diplomat-agent scan .
-
-# Step 2 — gate what it should do at runtime (deterministic, <1 ms)
-pip install "diplomat-gate[yaml]"
-```
-
----
+- `diplomat-agent` is open source under Apache-2.0.
+- `diplomat-gate` is **source-available under the Business Source License 1.1**, not open source in the OSI sense. You can read it, run it in production inside your own organization, and modify it. You cannot offer it to third parties as a competing hosted or managed service. Each version converts to Apache-2.0 on its Change Date. Versions published before the license change stay under Apache-2.0. Details: [LICENSE](https://github.com/Diplomat-ai/diplomat-gate/blob/main/LICENSE) and [LICENSING.md](https://github.com/Diplomat-ai/diplomat-gate/blob/main/LICENSING.md).
 
 ## What we are not
 
-`diplomat-gate` is a **syntactic** enforcement layer, not a semantic one.
-It is one layer in a defense-in-depth strategy, not a silver bullet.
+Diplomat is intentionally narrow. It is defense in depth, not a silver bullet.
 
-- It does **not** classify intent or detect prompt injection — combine it
-  with LLM-based guardrails when you need that.
-- The hash-chained audit log resists accidental corruption — for strong
-  tamper-evidence against a privileged local attacker, ship records to a
-  write-once external store.
-- Rate-limit policies are accurate single-process — for distributed
-  workloads, wrap with an external lock or store.
+- `diplomat-gate` is **syntactic, not semantic**. It enforces the rules you write on the parameters of a tool call. It does not classify intent and does not detect prompt injection.
+- The audit chain detects accidental corruption. It is not tamper-evidence against a privileged local attacker, who can rebuild a valid chain.
+- Rate limits are accurate within a single process.
+- `diplomat-agent` limits ([Known limitations](https://github.com/Diplomat-ai/diplomat-agent#known-limitations)): Static analysis only — no runtime detection. Python only — TypeScript on the roadmap. Inter-procedural tracing: same-package top-level functions (depth 2). Class methods, cross-package chains, and depth > 2 are not resolved.
+- Diplomat complements your cybersecurity tools. They watch for threats; Diplomat enforces your decisions.
 
-We say this in every README, every pitch, and every conversation with a
-prospect. Intentionally narrow. Compose with complementary tools.
+## Standards
 
----
-
-## Standards alignment
-
-OWASP Agentic Top 10 · EU AI Act Article 12 · NIST AI RMF · DORA ·
-SARIF 2.1.0 · CSAF 2.0
-
----
+Findings and decisions are mapped to the OWASP Agentic Top 10, and the audit output is built to support work against the EU AI Act (Article 12), NIST AI RMF and DORA. This is documentation support, not a legal qualification of your systems: validate it with your legal counsel or DPO.
 
 ## Get started
 
-- **Try the scanner** — `pip install diplomat-agent && diplomat-agent scan .`
-- **Run the OpenClaw demo** — clone [`diplomat-gate`](https://github.com/Diplomat-ai/diplomat-gate),
-  run `python demos/openclaw/run.py`. ~60 seconds. No API key.
-- **Reach out** — [josselin@diplomat.run](mailto:josselin@diplomat.run)
-  · [diplomat.run](https://diplomat.run)
+```bash
+pip install diplomat-agent
+diplomat-agent scan ./your-agent
+```
 
-Diplomat-ai is built by [Diplomat Services SASU](https://diplomat.run),
-Cagnes-sur-Mer, France. SIREN 100 251 834.
+Questions, a 30-minute assessment of your agents, or a licensing question: [diplomat.run](https://diplomat.run) · Diplomat Services SASU, Cagnes-sur-Mer, France.

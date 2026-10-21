@@ -93,5 +93,14 @@ Do **not** file public issues. See the org-wide
 
 ## License
 
-By contributing, you agree your contributions are licensed under
-**Apache 2.0**, the license of all Diplomat-ai repositories.
+Licensing is declared per repository:
+
+- **This repository** (`Diplomat-ai/.github`): Apache 2.0.
+- **diplomat-agent**: Apache-2.0. See its
+  [`CONTRIBUTING.md`](https://github.com/Diplomat-ai/diplomat-agent/blob/main/CONTRIBUTING.md).
+- **diplomat-gate**: Business Source License 1.1 (source-available, not open source).
+  By submitting a pull request there, you declare that you have the right to contribute
+  and you grant Diplomat Services SASU a perpetual, worldwide, irrevocable, sublicensable
+  license, including the right to relicense your contribution. See its
+  [`CONTRIBUTING.md`](https://github.com/Diplomat-ai/diplomat-gate/blob/main/CONTRIBUTING.md)
+  and [`LICENSING.md`](https://github.com/Diplomat-ai/diplomat-gate/blob/main/LICENSING.md).
