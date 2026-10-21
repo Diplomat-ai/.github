@@ -6,17 +6,18 @@ All visuals in `profile/README.md` are reproducible from code.
 
 - `triptych-know-decide-prove.svg` — the three pillars of the Diplomat-ai
   ecosystem (Know / Decide / Prove)
-- `benchmark-unguarded.svg` — the 76% benchmark across 16 open-source
-  AI agent codebases
+
+Note: `benchmark-unguarded.svg` (the former 76% chart) was removed because that figure
+is superseded by the 70.9% / 71% measurement. `generate_benchmark.py` is still in this
+folder but its output is no longer used by `profile/README.md`.
 
 ## Regeneration
 
-Each SVG has a generator script alongside it:
+Each SVG listed above has a generator script alongside it:
 
 ```bash
 # From the repo root
 python profile/images/generate_triptych.py
-python profile/images/generate_benchmark.py
 ```
 
 The scripts use only Python stdlib (`xml.etree.ElementTree`, `pathlib`)
