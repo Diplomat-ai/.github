@@ -6,7 +6,7 @@
 
 # Your AI agents act on their own. Your rules have to keep up.
 
-Diplomat turns your company's rules into automatic controls that block or approve every sensitive action your AI agents take, in under a millisecond, with verifiable proof.
+Diplomat turns your company's rules into automatic controls that block or approve the sensitive actions your rules cover, in under a millisecond, with verifiable proof.
 
 An assistant suggests. An agent executes. A rule written in a prompt is a request; only a rule applied to the action is a barrier.
 
@@ -21,7 +21,7 @@ One chain, three steps. Each step delivers value on its own, you decide how far 
 | **Prove** | Can we show who authorized what? | [diplomat.run](https://diplomat.run) | Commercial (hosted) | early access |
 
 - **diplomat-agent** is a static AST scanner for Python agents. It lists every tool call with a side effect (payment, email, database write, delete, subprocess, upload, agent invocation) and checks whether a guard surrounds it. It outputs a `toolcalls.yaml` Behavioral BOM, SARIF 2.1.0, CSAF 2.0, JSON and Markdown.
-- **diplomat-gate** is a deterministic runtime layer. It intercepts a tool call and returns `CONTINUE`, `REVIEW` or `STOP` in about 20 µs (one policy) to about 500 µs (five policies). No LLM call, no network. Each decision produces a SHA-256 hash-chained receipt, and `REVIEW` decisions go to a local review queue.
+- **diplomat-gate** is a deterministic runtime layer. It intercepts a tool call and returns `CONTINUE`, `REVIEW` or `STOP` in about 18 µs for a simple policy and about 496 µs for five policies (mean on a dev laptop, with a variance of 1.5x to 4x across sessions; see [Performance](https://github.com/Diplomat-ai/diplomat-gate#performance)). No LLM call, no network. Each decision produces a SHA-256 hash-chained receipt, and `REVIEW` decisions go to a local review queue.
 - **diplomat.run** is the hosted layer: cross-tenant audit, dashboard, managed approval routing, and an export mapped to EU AI Act Article 12.
 
 ## Why
@@ -40,7 +40,7 @@ Diplomat is intentionally narrow. It is defense in depth, not a silver bullet.
 - `diplomat-gate` is **syntactic, not semantic**. It enforces the rules you write on the parameters of a tool call. It does not classify intent and does not detect prompt injection.
 - The audit chain detects accidental corruption. It is not tamper-evidence against a privileged local attacker, who can rebuild a valid chain.
 - Rate limits are accurate within a single process.
-- `diplomat-agent` is intra-procedural plus decorators within the same package, and Python only today. It does no runtime detection.
+- `diplomat-agent` limits ([Known limitations](https://github.com/Diplomat-ai/diplomat-agent#known-limitations)): Static analysis only — no runtime detection. Python only — TypeScript on the roadmap. Inter-procedural tracing: same-package top-level functions (depth 2). Class methods, cross-package chains, and depth > 2 are not resolved.
 - Diplomat complements your cybersecurity tools. They watch for threats; Diplomat enforces your decisions.
 
 ## Standards
